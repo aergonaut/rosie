@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -32,9 +33,27 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'puma'
+
+gem 'sidekiq'
+
+gem 'octokit'
+
+gem 'rollbar'
+
+gem 'haml-rails'
+
+gem "skylight"
+
+gem 'transit-ruby', require: 'transit'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'rspec-rails'
+
+  gem 'dotenv'
 end
 
 group :development do
@@ -45,3 +64,13 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+  gem 'vcr'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
