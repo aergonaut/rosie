@@ -4,10 +4,9 @@ class ReceivePullRequestEvent
   def perform(payload)
     warns = []
 
-    [CheckPullRequestTitle].each do |subtask_klass|
-      subtask = subtask_klass.new
-      subtask.perform(payload)
-      warns.concat(subtask.warnings)
+    [CheckPullRequestTitle].each do |subtask|
+      warnings = subtask.run(payload)
+      warns.concat(warnings)
     end
 
     if warns.any?

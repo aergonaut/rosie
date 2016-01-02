@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.2.4
+before_script:
+  - "bundle exec rake db:create db:test:prepare"
+script: bundle exec rspec
+env:
+  global:
+    - ROSIE_GITHUB_ACCESS_TOKEN=abc123
+    - ROSIE_GITHUB_REPO=aergonaut/testrepo
