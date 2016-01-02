@@ -1,5 +1,7 @@
 # rosie
 
+[![Build Status](https://travis-ci.org/aergonaut/rosie.svg?branch=master)](https://travis-ci.org/aergonaut/rosie)
+
 **Rosie** helps keep your repository tidy by ensuring your contributors follow
 a standard format for commit messages and Pull Request titles.
 
