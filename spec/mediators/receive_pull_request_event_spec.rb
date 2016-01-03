@@ -9,7 +9,7 @@ RSpec.describe ReceivePullRequestEvent do
   end
 
   before do
-    stub_request(:post, %r{https?://api.github.com/repos/\w+/\w+/issues/\d+/comments})
+    stub_request(:post, %r{https?://api.github.com/repos/[A-Za-z0-9_-]+/[A-Za-z0-9_-]+/issues/\d+/comments})
   end
 
   context "when one of the subtasks raises a warning" do
@@ -19,7 +19,7 @@ RSpec.describe ReceivePullRequestEvent do
     end
 
     it "posts a comment to GitHub" do
-      expect(WebMock).to have_requested(:post, %r{https?://api.github.com/repos/\w+/\w+/issues/\d+/comments})
+      expect(WebMock).to have_requested(:post, %r{https?://api.github.com/repos/[A-Za-z0-9_-]+/[A-Za-z0-9_-]+/issues/\d+/comments})
     end
   end
 
@@ -30,7 +30,7 @@ RSpec.describe ReceivePullRequestEvent do
     end
 
     it "does not post any comments" do
-      expect(WebMock).to_not have_requested(:post, %r{https?://api.github.com/repos/\w+/\w+/issues/\d+/comments})
+      expect(WebMock).to_not have_requested(:post, %r{https?://api.github.com/repos/[A-Za-z0-9_-]+/[A-Za-z0-9_-]+/issues/\d+/comments})
     end
   end
 end

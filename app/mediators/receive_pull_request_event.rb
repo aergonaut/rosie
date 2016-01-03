@@ -24,7 +24,7 @@ There were the following issues with your Pull Request
 EOT
 
       github.add_comment(
-        ENV["ROSIE_GITHUB_REPO"],
+        payload["repository"]["full_name"],
         payload["number"],
         comment
       )
