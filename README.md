@@ -17,7 +17,7 @@ useful to you without some serious customization. YMMV.
 
 ### Supported checks
 
-- [ ] Pull Request title follows standard format
+- [x] Pull Request title follows standard format
 - [ ] Commit message follows standard format
 
 ## License
