@@ -19,6 +19,8 @@ useful to you without some serious customization. YMMV.
 
 - [x] Pull Request title follows standard format
 - [ ] Commit message follows standard format
+- [ ] If the commit introduces a migration, the timestamp in `schema.rb` must be
+\>= the timestamp of the migration
 
 ## License
 
