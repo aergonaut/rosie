@@ -1,10 +1,14 @@
 class ReceivePullRequestEvent
   include Sidekiq::Worker
 
+  def self.subtasks
+    [CheckPullRequestTitle, CheckSchemaTimestamp]
+  end
+
   def perform(payload)
     warns = []
 
-    [CheckPullRequestTitle, CheckSchemaTimestamp].each do |subtask|
+    ReceivePullRequestEvent.subtasks.each do |subtask|
       warnings = subtask.run(payload)
       warns.concat(warnings)
     end

@@ -8,13 +8,23 @@ RSpec.describe ReceivePullRequestEvent do
     from_fixture
   end
 
+  let(:fake_subtask) do
+    Class.new do
+      def self.run(*); end
+    end
+  end
+
   before do
+    expect(fake_subtask).to receive(:run).and_return(fake_subtask_result)
+    expect(ReceivePullRequestEvent).to receive(:subtasks).and_return([fake_subtask])
+
     stub_request(:post, %r{https?://api.github.com/repos/[A-Za-z0-9_-]+/[A-Za-z0-9_-]+/issues/\d+/comments})
   end
 
   context "when one of the subtasks raises a warning" do
+    let(:fake_subtask_result) { ["something happened"] }
+
     before do
-      expect(CheckPullRequestTitle).to receive(:run).and_return(["something happened"])
       job.perform(payload)
     end
 
@@ -24,8 +34,9 @@ RSpec.describe ReceivePullRequestEvent do
   end
 
   context "when there are no warnings" do
+    let(:fake_subtask_result) { [] }
+
     before do
-      expect(CheckPullRequestTitle).to receive(:run).and_return([])
       job.perform(payload)
     end
 
