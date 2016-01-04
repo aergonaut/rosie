@@ -11,8 +11,8 @@ useful to you without some serious customization. YMMV.
 
 ## Features
 
-- [ ] Check incoming Pull Requests against a library of different checks
-- [ ] Warn of violations in a comment posted on the Pull Request
+- [x] Check incoming Pull Requests against a library of different checks
+- [x] Warn of violations in a comment posted on the Pull Request
 - [ ] Optionally add a failed status to the PR if standard is broken
 
 ### Supported checks
