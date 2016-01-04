@@ -4,7 +4,7 @@ class ReceivePullRequestEvent
   def perform(payload)
     warns = []
 
-    [CheckPullRequestTitle].each do |subtask|
+    [CheckPullRequestTitle, CheckSchemaTimestamp].each do |subtask|
       warnings = subtask.run(payload)
       warns.concat(warnings)
     end
