@@ -20,7 +20,7 @@ RSpec.describe CheckPullRequestTitle do
   end
 
   context "when the title does match the format" do
-    let(:title) { "CD-4242 123_release foobar" }
+    let(:title) { "CD-4242 CD-5618 123_release foobar" }
 
     it "does not return any errors" do
       expect(job.perform(payload)).to be_empty

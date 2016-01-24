@@ -7,7 +7,7 @@ class CheckPullRequestTitle
     @warnings = []
 
     title = payload["pull_request"]["title"]
-    title_format = /(cd|jz|cm)\-(\d+)\s+(\d{3}_release)\s+(.+)/i
+    title_format = /(cd|jz|cm)\-(\d+)\s+(cd|jz|cm)\-(\d+)\s+(\d{3}_release)\s+(.+)/i
     @warnings << "Pull Request title does not match the standard format" unless title =~ title_format
 
     @warnings
