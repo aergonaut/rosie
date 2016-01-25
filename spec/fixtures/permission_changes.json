@@ -1,0 +1,14 @@
+[
+    {
+        "additions": 18,
+        "blob_url": "https://github.com/bowser/bowser_development/blob/bee589aae9d2b8ec1b3fec6c38d13afbdf407336/db/blank/permissions.yml",
+        "changes": 18,
+        "contents_url": "https://api.github.com/repos/bowser/bowser_development/contents/db/blank/permissions.yml?ref=bee589aae9d2b8ec1b3fec6c38d13afbdf407336",
+        "deletions": 0,
+        "filename": "db/blank/permissions.yml",
+        "patch": "@@ -6862,6 +6862,24 @@ woggle_event_history__search_woggle_event_history_table:\n   action: search_woggle_event_history_table\n   description: Allows user to sort and paginate data on the woggle events history page\n   flavor: 0\n+squiggle_transfers__bulk_loader: \n+  id: 66816\n+  controller: squiggle_transfers\n+  action: bulk_loader\n+  description: \"\"\n+  flavor: 4\n+squiggle_transfers__list_csv: \n+  id: 79042\n+  controller: squiggle_transfers\n+  action: list_csv\n+  description: \"\"\n+  flavor: 4\n+squiggle_transfers__load_progress: \n+  id: 59815\n+  controller: squiggle_transfers\n+  action: load_progress\n+  description: \"\"\n+  flavor: 4\n woggle_lines__index: \n   id: 29629\n   controller: woggle_lines",
+        "raw_url": "https://github.com/bowser/bowser_development/raw/bee589aae9d2b8ec1b3fec6c38d13afbdf407336/db/blank/permissions.yml",
+        "sha": "be5e367be3858a2db65f5be4e1cde07babea90b7",
+        "status": "modified"
+    }
+]

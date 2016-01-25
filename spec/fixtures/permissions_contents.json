@@ -1,0 +1,18 @@
+{
+    "_links": {
+        "git": "https://api.github.com/repos/aergonaut/testrepo/git/blobs/eab7a705bc5f90f9af8ea5a7ef6c10c98adf99ee",
+        "html": "https://github.com/aergonaut/testrepo/blob/master/README.md",
+        "self": "https://api.github.com/repos/aergonaut/testrepo/contents/README.md?ref=master"
+    },
+    "content": "IyBUZXN0IFJlcG8gUGxlYXNlIElnbm9yZQoKVGhpcyBpcyBvbmx5IGEgdGVz\ndC4KClRlc3QgbW9yZS4K\n",
+    "download_url": "https://raw.githubusercontent.com/aergonaut/testrepo/master/README.md",
+    "encoding": "base64",
+    "git_url": "https://api.github.com/repos/aergonaut/testrepo/git/blobs/eab7a705bc5f90f9af8ea5a7ef6c10c98adf99ee",
+    "html_url": "https://github.com/aergonaut/testrepo/blob/master/README.md",
+    "name": "README.md",
+    "path": "README.md",
+    "sha": "eab7a705bc5f90f9af8ea5a7ef6c10c98adf99ee",
+    "size": 60,
+    "type": "file",
+    "url": "https://api.github.com/repos/aergonaut/testrepo/contents/README.md?ref=master"
+}
