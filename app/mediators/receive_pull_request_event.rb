@@ -22,9 +22,11 @@ class ReceivePullRequestEvent
       github = Octokit::Client.new(access_token: ENV["ROSIE_GITHUB_ACCESS_TOKEN"])
 
       comment = <<-EOT
-There were the following issues with your Pull Request
+There were the following issues with your Pull Request:
 
 #{warnings}
+
+PR analysis provided by Rosie the Robot Maid.
 EOT
 
       github.add_comment(
